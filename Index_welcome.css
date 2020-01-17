@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-image: url(images-content/ackground.jpg);
+    background-size: cover;
+    
+}
+h1{
+    color: #f7ca18;
+    font-family: 'Montserrat', sans-serif;
+}
+h3{
+    color: #f7ca18;
+    font-family: 'Montserrat', sans-serif; 
+}
+p{
+    color: #f7ca18;
+}
+form{
+    color: #f7ca18;
+}
+.quizinfo{
+    display:flex;
+    justify-content: space-between;
+}
+img{
+    width: 50%;
+}
