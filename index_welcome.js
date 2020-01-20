@@ -58,6 +58,11 @@ function checkAnswer(){
 $('.welcome_section').on('click' , '.submitanswer' , function (event){
     event.preventDefault();
     let answerSelected = $('.option:checked').val();
+    let text = "Next Question";
+    if( currentQuestion === quizQuestions.length -1){
+        text="Final Score"
+    }
+
     if ( answerSelected === undefined){
         $('.unselected_error').html(`
         <p>
@@ -79,9 +84,9 @@ $('.welcome_section').on('click' , '.submitanswer' , function (event){
    </div>
     <div class="feedbackright_section">
     <img src="images-content/Correctanswer.gif" alt="BB-8 giving you a thumbs up!">
-     <p>Congrats your correct. Click the button below to go to the next question.  </p>
+     <p>Congrats you're correct. Click the button below.  </p>
      <form>
-         <button class="next_question" type="submit">Next Question</button>
+         <button class="next_question" type="submit">${text}</button>
      </form>
     </div>
         `)
@@ -99,9 +104,9 @@ $('.welcome_section').on('click' , '.submitanswer' , function (event){
 </div>
 <div class="feedbackwrong_section">
 <img src="images-content/wronganswer.gif" alt="Poe Dameron telling you to rethink your technique.">
- <p>You may want to listen to Poe's Advice, hit the button below for the next question.  </p>
+ <p>You may want to listen to Poe's Advice. Click the button below.  </p>
  <form>
-     <button class="next_question" type="submit">Next Question</button>
+     <button class="next_question" type="submit">${text}</button>
  </form>
 </div>
         `)
